@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"examples\/pet\/pets[1:4]","start":1619959186161,"end":1619959188786,"title":"examples\/pet\/pets[1:4] 14:39:46.161-14:39:48.786 Add a new pet to the store"},{"id":2,"group":1,"content":"examples\/pet\/pets[2:11]","start":1619959188867,"end":1619959189383,"title":"examples\/pet\/pets[2:11] 14:39:48.867-14:39:49.383 Updtae an existing pet"},{"id":3,"group":1,"content":"examples\/pet\/pets[3:21]","start":1619959189406,"end":1619959189886,"title":"examples\/pet\/pets[3:21] 14:39:49.406-14:39:49.886 Find pet by ID"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

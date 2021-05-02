@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: examples.pet.PetRunner
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.062 s - in examples.pet.PetRunner
