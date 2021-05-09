@@ -22,5 +22,5 @@ Scenario: Find pet by ID
 Given url petStoreUrl
 Given path '/1'
 When method get
-Then status 404
+Then status 200
 And match response.category.name contains "Pug"
